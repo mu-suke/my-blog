@@ -1,0 +1,19 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "description": "My top-notch Nuxt.js project",
+  "author": "mu-suke",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.0.0"
+  }
+}
