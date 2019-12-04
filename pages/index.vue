@@ -1,18 +1,17 @@
 <template>
   <section class="index">
-    <card
-      v-for="(post,i ) in posts"
-      :key="i"
+    <card v-for="post in posts"
+      v-bind:key="post.fields.slug"
       :title="post.fields.title"
-      :id="post.sys.id"
-      :date="post.sys.updatedAt"
-    />
+      :slug="post.fields.slug"
+      :headerImage="post.fields.headerImage"
+      :publishedAt="post.fields.publishedAt"/>
   </section>
 </template>
 
 <script>
 import Card from '~/components/Card.vue'
-import { createClient } from '~/plugins/contentful.js'
+import {createClient} from '~/plugins/contentful.js'
 
 const client = createClient()
 export default {
@@ -20,15 +19,23 @@ export default {
   components: {
     Card
   },
-  asyncData({ env, params }) {
-    return client
-      .getEntries(env.CTF_BLOG_POST_TYPE_ID)
-      .then(entries => {
-        return {
-          posts: entries.items
-        }
-      })
-      .catch(console.error)
+  async asyncData ({ env, params }) {
+    return await client.getEntries({
+      'content_type': env.CTF_BLOG_POST_TYPE_ID,
+      order: '-fields.publishedAt',
+    }).then(entries => {
+      return {
+        posts: entries.items
+      }
+    })
+    .catch(console.error)
   }
 }
 </script>
+
+<style scoped>
+.index {
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>
