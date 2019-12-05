@@ -11,7 +11,7 @@
 
 <script>
 import Card from '~/components/Card.vue'
-import {createClient} from '~/plugins/contentful.js'
+import { createClient } from '~/plugins/contentful.js'
 
 const client = createClient()
 export default {
@@ -19,7 +19,12 @@ export default {
   components: {
     Card
   },
-  async asyncData ({ env, params }) {
+  data: () => {
+    return {
+      posts: []
+    }
+  },
+  async asyncData ({ env }) {
     return await client.getEntries({
       'content_type': env.CTF_BLOG_POST_TYPE_ID,
       order: '-fields.publishedAt',
