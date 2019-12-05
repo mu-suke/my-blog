@@ -40,6 +40,7 @@ export default {
 
 <style scoped>
 .index {
+  color: white;
   display: flex;
   flex-wrap: wrap;
 }
