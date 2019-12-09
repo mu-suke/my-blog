@@ -134,7 +134,7 @@ const config = {
     },
   },
 
-  plugins: [ { src: '~plugins/contentful' } ],
+  plugins: [ { src: './plugins/contentful' } ],
 
   generate: {
     routes () {
