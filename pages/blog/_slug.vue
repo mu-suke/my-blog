@@ -11,7 +11,7 @@
 
 <script>
 import VueMarkdown from 'vue-markdown'
-import { createClient } from '../../plugins/contentful.js'
+import { createClient } from '~/plugins/contentful.js'
 
 const client = createClient()
 export default {
