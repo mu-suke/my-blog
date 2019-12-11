@@ -1,12 +1,23 @@
 <template>
-  <div>
-    <header>
-      <h1 class="title">いい感じのSPAブログ</h1>
-    </header>
-    <main class="container">
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+    >
+      <v-toolbar-title>
+        <span class="headline white--text title">いい感じのSPAブログ</span>
+      </v-toolbar-title>
+    </v-app-bar>
+    <v-content class="container">
       <nuxt/>
-    </main>
-  </div>
+    </v-content>
+    <v-footer
+      app
+      color="primary"
+    >
+      <span class="white--text">&copy; 2019</span>
+    </v-footer>
+  </v-app>
 </template>
 
 <style>

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Card from '~/components/Card.vue'
+import Card from '~/components/molecules/Card.vue'
 import { createClient } from '~/plugins/contentful.js'
 
 const client = createClient()

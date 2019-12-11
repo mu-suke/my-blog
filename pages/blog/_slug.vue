@@ -1,11 +1,13 @@
 <template>
   <section class="slug">
-    <h1 class="slug_title">{{ post.fields.title }}</h1>
+    <img class="slug_image" v-bind:src="post.fields.headerImage.fields.file.url"/>
+    <section>
+      <h2 class="slug_title">{{ post.fields.title }}</h2>
+    </section>
     <p class="slug_date">
       {{ (new Date(post.fields.publishedAt)).toLocaleDateString() }}
     </p>
-    <img class="slug_image" v-bind:src="post.fields.headerImage.fields.file.url"/>
-    <vue-markdown>{{post.fields.body}}</vue-markdown>
+    <vue-markdown class="slug_body">{{post.fields.body}}</vue-markdown>
   </section>
 </template>
 
@@ -34,10 +36,15 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .slug {
   max-width: 800px;
   margin: 0 auto;
+}
+.slug_image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 .slug_title {
   font-size: 2.0rem;
@@ -46,6 +53,12 @@ export default {
 .slug_date {
   font-size: 1.0rem;
   color: rgb(57, 72, 85);
-  text-align: right;
+}
+.slug_body {
+  margin-top: 10px;
+}
+.slug_body p {
+  line-height: 1.5;
+  margin-top: 10px;
 }
 </style>
