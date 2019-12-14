@@ -1,25 +1,24 @@
 <template>
-  <div class="index">
-    <particle/>
-    <card v-for="post in posts"
+  <section>
+    <card
+      v-for="post in posts"
       v-bind:key="post.fields.slug"
       :title="post.fields.title"
       :slug="post.fields.slug"
       :headerImage="post.fields.headerImage"
       :publishedAt="post.fields.publishedAt"/>
-  </div>
+  </section>
 </template>
 
 <script>
-import Particle from '~/components/organisms/Particle.vue'
 import Card from '~/components/molecules/Card.vue'
 import { createClient } from '~/plugins/contentful.js'
-
 const client = createClient()
+
 export default {
+  name: 'Article',
   transition: 'slide-left',
   components: {
-    Particle,
     Card
   },
   async asyncData ({ env }) {
@@ -35,13 +34,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.index {
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: 0 auto;
-}
-</style>

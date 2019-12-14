@@ -119,7 +119,7 @@ const config = {
           success: colors.green.accent3
         },
         light: {
-          primary: colors.indigo.lighten2,
+          primary: colors.indigo.darken1,
           secondary: colors.pink.base,
           accent: colors.cyan.base,
           error: colors.red.base,
@@ -144,7 +144,10 @@ const config = {
     },
   },
 
-  plugins: [ { src: './plugins/contentful' } ],
+  plugins: [
+    { src: './plugins/contentful' },
+    { src: '~plugins/particles.js', ssr: false }
+  ],
 
   generate: {
     routes () {

@@ -13,6 +13,7 @@
     </v-content>
     <v-footer
       app
+      absolute
       color="primary"
     >
       <span class="white--text">&copy; 2019</span>
@@ -34,8 +35,7 @@ h1, h2, h3 {
   text-align: center;
 }
 .container {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
 }
 .slide-left-enter {
   transform: translateX(2000px);
@@ -51,5 +51,7 @@ h1, h2, h3 {
 .slide-left-leave-active {
   transition: all .3s linear;
 }
-
+.main {
+  background-color: lightskyblue;
+}
 </style>
