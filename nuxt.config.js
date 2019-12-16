@@ -119,7 +119,7 @@ const config = {
           success: colors.green.accent3
         },
         light: {
-          primary: colors.indigo.darken1,
+          primary: "193368",
           secondary: colors.pink.base,
           accent: colors.cyan.base,
           error: colors.red.base,

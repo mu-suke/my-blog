@@ -23,6 +23,7 @@ export default {
   padding: 10px 20px;
   margin: 10px 10px;
   text-align: center;
+  z-index: 10;
 }
 .wrapper {
   text-decoration: none;
