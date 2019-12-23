@@ -6,7 +6,7 @@
       hide-on-scroll
     >
       <v-toolbar-title>
-        <span class="headline white--text title">いい感じのSPAブログ</span>
+        <span class="headline white--text title">&lt;むーすけの雑多ブログ/&gt;</span>
       </v-toolbar-title>
     </v-app-bar>
     <v-content class="container">

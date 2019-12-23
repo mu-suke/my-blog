@@ -88,7 +88,7 @@ const cdaClient = createClient(ctfConfig)
 const config = {
   mode: 'universal',
   head: {
-    title: 'nuxt_blog',
+    title: 'むーすけの雑多ブログ',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
