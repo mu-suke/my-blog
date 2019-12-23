@@ -3,6 +3,7 @@
     <v-app-bar
       app
       color="primary"
+      hide-on-scroll
     >
       <v-toolbar-title>
         <span class="headline white--text title">いい感じのSPAブログ</span>
