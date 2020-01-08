@@ -9,6 +9,7 @@
         <span class="headline white--text title">&lt;むーすけの雑多ブログ/&gt;</span>
       </v-toolbar-title>
     </v-app-bar>
+    <particle/>
     <v-content class="container">
       <nuxt/>
     </v-content>
@@ -21,6 +22,15 @@
     </v-footer>
   </v-app>
 </template>
+
+<script>
+import Particle from '~/components/organisms/Particle.vue'
+export default {
+  components:{
+    Particle,
+  }
+}
+</script>
 
 <style>
 html {

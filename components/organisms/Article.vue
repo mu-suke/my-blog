@@ -26,6 +26,7 @@ export default {
       'content_type': env.CTF_BLOG_POST_TYPE_ID,
       order: '-fields.publishedAt',
     }).then(entries => {
+      console.log(entries.items)
       return {
         posts: entries.items
       }
