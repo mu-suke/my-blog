@@ -1,11 +1,15 @@
 <template>
-  <article class="card">
+  <v-card class="card">
     <nuxt-link v-bind:to="{ name: 'blog-slug', params: { slug: slug }}" class="wrapper">
-      <img class="card_image" v-bind:src="headerImage.fields.file.url"/>
-      <h1 class="card_title">{{ title }}</h1>
-      <p class="card_date">{{ (new Date(publishedAt)).toLocaleDateString() }}</p>
+      <v-container>
+        <v-row>
+          <img class="card_image" v-bind:src="headerImage.fields.file.url"/>
+          <h1 class="card_title">{{ title }}</h1>
+          <p class="card_date">{{ (new Date(publishedAt)).toLocaleDateString() }}</p>
+        </v-row>
+      </v-container>
     </nuxt-link>
-  </article>
+  </v-card>
 </template>
 
 <script>
@@ -16,8 +20,6 @@ export default {
 
 <style scoped>
 .card {
-  width: 300px;
-  height: 200px;
   box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.2);
   border: 0.5px solid rgb(57, 72, 85);
   padding: 10px 20px;

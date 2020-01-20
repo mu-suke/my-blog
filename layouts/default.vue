@@ -9,8 +9,7 @@
         <span class="headline white--text title">&lt;むーすけの雑多ブログ/&gt;</span>
       </v-toolbar-title>
     </v-app-bar>
-    <particle/>
-    <v-content class="container">
+    <v-content>
       <nuxt/>
     </v-content>
     <v-footer
@@ -24,10 +23,8 @@
 </template>
 
 <script>
-import Particle from '~/components/organisms/Particle.vue'
 export default {
   components:{
-    Particle,
   }
 }
 </script>
@@ -44,9 +41,6 @@ h1, h2, h3 {
   color: #35495e;
   margin: 100px 0 30px;
   text-align: center;
-}
-.container {
-  width: 100%;
 }
 .slide-left-enter {
   transform: translateX(2000px);

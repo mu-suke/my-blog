@@ -1,8 +1,5 @@
 <template>
     <div id="snowfall">
-      <h2>
-        テキスト
-      </h2>
     </div>
 </template>
 
