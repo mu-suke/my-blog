@@ -1,5 +1,6 @@
 <template>
-    <div id="snowfall"></div>
+    <div id="snowfall">
+    </div>
 </template>
 
 <script>
@@ -14,9 +15,9 @@ export default {
 
 <style>
 #snowfall {
-  position: absolute;
+  background-color: #333333;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 0;
 }
 </style>

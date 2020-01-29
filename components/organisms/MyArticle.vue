@@ -6,7 +6,8 @@
       :title="post.fields.title"
       :slug="post.fields.slug"
       :headerImage="post.fields.headerImage"
-      :publishedAt="post.fields.publishedAt"/>
+      :publishedAt="post.fields.publishedAt"
+    ></card>
   </section>
 </template>
 
@@ -16,7 +17,7 @@ import { createClient } from '~/plugins/contentful.js'
 const client = createClient()
 
 export default {
-  name: 'Article',
+  // name: 'MyArticle',
   transition: 'slide-left',
   components: {
     Card
@@ -26,6 +27,7 @@ export default {
       'content_type': env.CTF_BLOG_POST_TYPE_ID,
       order: '-fields.publishedAt',
     }).then(entries => {
+      console.log(entries.items)
       return {
         posts: entries.items
       }
