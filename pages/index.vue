@@ -17,13 +17,15 @@
         </v-col>
       </v-row>
     </v-parallax>
-    <v-col cols="12">
-      <card v-for="post in posts"
-      v-bind:key="post.fields.slug"
-      :title="post.fields.title"
-      :slug="post.fields.slug"
-      :headerImage="post.fields.headerImage"
-      :publishedAt="post.fields.publishedAt"/>
+    <v-col>
+      <v-row justify="center">
+        <card v-for="post in posts"
+        v-bind:key="post.fields.slug"
+        :title="post.fields.title"
+        :slug="post.fields.slug"
+        :headerImage="post.fields.headerImage"
+        :publishedAt="post.fields.publishedAt"/>
+      </v-row>
       <MyArticle></MyArticle>
     </v-col>
   </v-container>
