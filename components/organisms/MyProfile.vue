@@ -7,7 +7,7 @@
           <v-row>
             <v-avatar size="128" class="mx-auto">
               <img
-                src="~/assets/profileIcon_.JPG"
+                src="~/assets/profileIcon_.png"
                 alt="むーすけのアイコン"
               >
             </v-avatar>
