@@ -3,9 +3,20 @@
     <nuxt-link v-bind:to="{ name: 'blog-slug', params: { slug: slug }}" class="wrapper">
       <v-container>
         <v-row>
-          <img class="card_image" v-bind:src="headerImage.fields.file.url"/>
-          <h1 class="card_title">{{ title }}</h1>
-          <p class="card_date">{{ (new Date(publishedAt)).toLocaleDateString() }}</p>
+          <v-col cols="4">
+            <v-img
+              class="card_image"
+              :src="headerImage.fields.file.url"
+              height="200"
+              width="200"
+              contain
+            >
+            </v-img>
+          </v-col>
+          <v-col cols="8">
+            <h3 class="card_title">{{ title }}</h3>
+            <p class="card_date">{{ (new Date(publishedAt)).toLocaleDateString() }}</p>
+          </v-col>
         </v-row>
       </v-container>
     </nuxt-link>

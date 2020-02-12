@@ -17,7 +17,7 @@
       absolute
       color="primary"
     >
-      <span class="white--text">&copy; 2019</span>
+      <span class="white--text">&copy; 2019-2020 mu-suke</span>
     </v-footer>
   </v-app>
 </template>
