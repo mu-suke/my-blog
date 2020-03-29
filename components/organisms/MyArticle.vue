@@ -1,18 +1,18 @@
 <template>
   <section>
-    <card
+    <my-post-card
       v-for="post in posts"
       v-bind:key="post.fields.slug"
       :title="post.fields.title"
       :slug="post.fields.slug"
       :headerImage="post.fields.headerImage"
       :publishedAt="post.fields.publishedAt"
-    ></card>
+    ></my-post-card>
   </section>
 </template>
 
 <script>
-import Card from '~/components/molecules/Card.vue'
+import MyPostCard from '~/components/molecules/MyPostCard.vue'
 import { createClient } from '~/plugins/contentful.js'
 const client = createClient()
 
@@ -20,7 +20,7 @@ export default {
   // name: 'MyArticle',
   transition: 'slide-left',
   components: {
-    Card
+    MyPostCard
   },
   async asyncData ({ env }) {
     return await client.getEntries({

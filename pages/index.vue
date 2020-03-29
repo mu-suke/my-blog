@@ -11,38 +11,39 @@
     >
       <my-profile/>
       <section-title icon="file-document-edit-outline" title="Posts"/>
-      <v-col
-      >
-        <card v-for="post in posts"
-          v-bind:key="post.fields.slug"
-          :title="post.fields.title"
-          :slug="post.fields.slug"
-          :headerImage="post.fields.headerImage"
-          :publishedAt="post.fields.publishedAt"
-        />
-        <MyArticle></MyArticle>
-      </v-col>
+      <v-row>
+        <v-col
+          v-for="post in posts"
+          :key="post.fields.slug"
+          xs="4"
+          sm="4"
+          lg="4"
+        >
+          <my-post-card
+            :title="post.fields.title"
+            :slug="post.fields.slug"
+            :headerImage="post.fields.headerImage"
+            :publishedAt="post.fields.publishedAt"
+          />
+        </v-col>
+      </v-row>
     </v-col>
   </v-container>
 </template>
 
 <script>
-// import Particle from '~/components/organisms/Particle.vue'
 import MyProfile from '~/components/organisms/MyProfile.vue'
 import SectionTitle from '~/components/atoms/SectionTitle.vue'
-import Card from '~/components/molecules/Card.vue'
-import MyArticle from '~/components/organisms/MyArticle.vue'
+import MyPostCard from '~/components/molecules/MyPostCard.vue'
 import { createClient } from '~/plugins/contentful.js'
 
 const client = createClient()
 export default {
   transition: 'slide-left',
   components: {
-    // Particle,
     MyProfile,
     SectionTitle,
-    Card,
-    MyArticle
+    MyPostCard
   },
   async asyncData ({ env }) {
     return await client.getEntries({
