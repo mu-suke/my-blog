@@ -44,7 +44,7 @@ const config = {
           success: colors.green.accent3
         },
         light: {
-          primary: "193368",
+          primary: "f8fafc",
           secondary: colors.pink.base,
           accent: colors.cyan.base,
           error: colors.red.base,

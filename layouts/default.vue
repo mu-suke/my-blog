@@ -2,32 +2,34 @@
   <v-app>
     <v-app-bar
       app
+      class="mx-auto"
       color="primary"
       hide-on-scroll
+      max-width="960"
     >
-      <v-toolbar-title>
-        <span class="headline white--text title">&lt;むーすけの雑多ブログ/&gt;</span>
+      <v-toolbar-title class="text-center">
+        <span class="font-weight-bold title">むーすけのなんでもブログ</span>
       </v-toolbar-title>
     </v-app-bar>
     <v-content>
-      <nuxt/>
+      <nuxt />
     </v-content>
     <v-footer
       app
       absolute
       color="primary"
     >
-      <span class="white--text">&copy; 2019-2020 mu-suke</span>
+      <v-card
+        flat
+        tile
+        width="100%"
+        class="text-center primary"
+      >
+        <v-card-text class="font-weight-bold">&copy; 2019-2020 mu-suke</v-card-text>
+      </v-card>
     </v-footer>
   </v-app>
 </template>
-
-<script>
-export default {
-  components:{
-  }
-}
-</script>
 
 <style>
 html {
