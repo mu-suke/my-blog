@@ -2,13 +2,15 @@
   <v-app>
     <v-app-bar
       app
-      class="mx-auto"
+      absolute
       color="primary"
-      hide-on-scroll
-      max-width="960"
+      dense
+      flat
     >
-      <v-toolbar-title class="text-center">
-        <span class="font-weight-bold title">むーすけのなんでもブログ</span>
+      <v-toolbar-title class="mx-auto">
+        <span class="title font-weight-bold">
+          むーすけのなんでもブログ
+        </span>
       </v-toolbar-title>
     </v-app-bar>
     <v-content>
