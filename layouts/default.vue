@@ -3,7 +3,7 @@
     <v-app-bar
       app
       absolute
-      color="primary"
+      color="secondary"
       dense
       flat
     >
@@ -13,19 +13,20 @@
         </span>
       </v-toolbar-title>
     </v-app-bar>
-    <v-content>
+    <transition mode="out-in">
       <nuxt />
-    </v-content>
+    </transition>
     <v-footer
       app
       absolute
-      color="primary"
+      class="pa-0"
+      color="secondary"
     >
       <v-card
         flat
         tile
         width="100%"
-        class="text-center primary"
+        class="text-center"
       >
         <v-card-text class="font-weight-bold">&copy; 2019-2020 mu-suke</v-card-text>
       </v-card>
@@ -33,18 +34,29 @@
   </v-app>
 </template>
 
+<script>
+export default {
+  transitions: {
+    name: 'bounce'
+  }
+}
+</script>
+
+
 <style>
+#app {
+  font-family: Lato,Noto Sans JP, 游ゴシック Medium, 游ゴシック体, Yu Gothic Medium, YuGothic, ヒラギノ角ゴ ProN, Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳ Ｐゴシック, MS PGothic, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
 html {
   font-family: "Source Sans Pro", 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
   font-size: 16px;
 }
 h1, h2, h3 {
   font-weight: normal;
-}
-.title {
-  color: #35495e;
-  margin: 100px 0 30px;
-  text-align: center;
 }
 .slide-left-enter {
   transform: translateX(2000px);
@@ -60,7 +72,12 @@ h1, h2, h3 {
 .slide-left-leave-active {
   transition: all .3s linear;
 }
-.main {
-  background-color: lightskyblue;
+
+.v-enter-active, .v-leave-active {
+  transition: opacity .5s;
 }
+.v-enter, .v-leave-to {
+  opacity: 0;
+}
+
 </style>
