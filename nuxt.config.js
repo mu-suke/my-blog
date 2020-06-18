@@ -37,15 +37,15 @@ const config = {
         dark: {
           primary: colors.blue.lighten2,
           accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
+          secondary: colors.brown.darken1,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
         },
         light: {
-          primary: "f8fafc",
-          secondary: colors.pink.base,
+          primary: "#000000",
+          secondary: colors.grey.lighten4,
           accent: colors.cyan.base,
           error: colors.red.base,
           warning: colors.amber.base,
