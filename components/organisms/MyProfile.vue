@@ -40,12 +40,6 @@
               </tbody>
               <tbody>
                 <tr >
-                  <td>Facebook</td>
-                  <td><a href="https://www.facebook.com/yusuke.murakami.927">村上 祐亮</a></td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr >
                   <td>Contact</td>
                   <td><a href="mailto:info@mu-suke.com">info@mu-suke.com</a></td>
                 </tr>
