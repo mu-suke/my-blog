@@ -11,6 +11,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/gtm": "^2.4.0",
+    "@nuxtjs/sitemap": "^2.4.0",
     "axios": "^0.21.1",
     "babel-runtime": "^6.26.0",
     "nuxt": "^2.10.2",

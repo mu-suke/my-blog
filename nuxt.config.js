@@ -103,6 +103,13 @@ const config = {
   gtm: {
     pageTracking: true,
     id: process.env.GTM_ID,
+  },
+  modules: [
+    "@nuxtjs/sitemap"
+  ],
+  sitemap: {
+    path: "/sitemap.xml",
+    hostname: "https://mu-suke.net",
   }
 }
 
