@@ -26,6 +26,7 @@ const config = {
 
   buildModules: [
     { src: '@nuxtjs/vuetify' },
+    '@nuxtjs/google-analytics',
   ],
 
   vuetify: {
@@ -98,6 +99,10 @@ const config = {
     googleAnalytics: {
       id: process.env.GOOGLE_ANALYTICS_ID
     }
+  },
+  gtm: {
+    pageTracking: true,
+    id: process.env.GTM_ID,
   }
 }
 
