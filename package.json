@@ -17,6 +17,7 @@
     "particles.js": "^2.0.0"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/vuetify": "^1.0.0",
     "contentful": "^7.10.0",
     "contentful-cli": "^1.2.12",
